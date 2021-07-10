@@ -1,0 +1,73 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<body>
+    <form action="" name='frm3'>
+       <label> What would you rather eat ? </label> 
+       <ol type='A'>
+      <li> <input type="radio" name="seven", value='10'> Vegitables
+      <li> <input type="radio" name="seven", value='20'> Meat
+      <li> <input type="radio" name="seven", value='30'> Junk food
+      <li> <input type="radio" name="seven", value='40'> Fruits
+      <li> <input type="radio" name="seven", value='50'> Sweets
+        </ol>
+
+       <label> What is your worst quality ? </label> 
+       <ol type='A'>
+      <li> <input type="radio" name="eight", value='10'> I'm too quiet
+      <li> <input type="radio" name="eight", value='20'> I'm lazy
+      <li> <input type="radio" name="eight", value='30'> I'm clumsy
+      <li> <input type="radio" name="eight", value='40'> I'm insecure
+      <li> <input type="radio" name="eight", value='50'> I'm perfect
+        </ol>
+       
+        <label> How athletic are you ? </label> 
+        <ol type='A'>
+       <li> <input type="radio" name="nine", value='10'> I hate exercise or sport
+       <li> <input type="radio" name="nine", value='20'> I'm generally inactive
+       <li> <input type="radio" name="nine", value='30'> I enjoy sport occasionally  
+       <li> <input type="radio" name="nine", value='40'> I work out reqularly
+       <li> <input type="radio" name="nine", value='50'> I'm extremely athletic
+         </ol>
+
+        <label> What would upse you most ? </label> 
+       <ol type='A'>
+      <li> <input type="radio" name="ten", value='10'> When a good book or movie ends
+      <li> <input type="radio" name="ten", value='20'> Being alone
+      <li> <input type="radio" name="ten", value='30'> Being ignored
+      <li> <input type="radio" name="ten", value='40'> Being lied to my face
+      <li> <input type="radio" name="ten", value='50'> Being interrupted
+        </ol>
+        
+        <input type="button" value="Submit" onclick="add()">
+
+    </form>
+    <a href="form_1.html">one</a>
+
+    <!-- <link rel="script" href="animals.js"> -->
+
+    <script>
+      function add(){
+       var sum3 = 0;
+      sum3 = sum3 + Number(document.frm3.seven.value);
+      sum3 = sum3 + Number(document.frm3.eight.value);
+      sum3 = sum3 + Number(document.frm3.nine.value);
+      sum3 = sum3 + Number(document.frm3.ten.value);
+      localStorage.setItem('sum3',sum3);
+      a = localStorage.getItem('sum1');
+      b = localStorage.getItem('sum2');
+      c = localStorage.getItem('sum3');
+      sum4 = Number(a) + Number(b) + Number(c);
+      if(sum4>0){
+        document.write('hi');
+      }
+      localStorage.setItem('sum4', sum4);
+}
+   </script>
+    
+</body>
+</html>

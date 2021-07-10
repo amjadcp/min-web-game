@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<body>
+    <form action="" name='frm2'>
+       <label> How does your social circle look like ? </label> 
+       <ol type='A'>
+      <li> <input type="radio" name="four", value='10'> Mostly just family
+      <li> <input type="radio" name="four", value='20'> A bunch of old friends
+      <li> <input type="radio" name="four", value='30'> A small circle of loyal friends
+      <li> <input type="radio" name="four", value='40'> I'm alone wolf and stick to myself
+      <li> <input type="radio" name="four", value='50'> A bunch of new friends
+
+        </ol>
+
+       <label> What is your dominant emotion ? </label> 
+       <ol type='A'>
+      <li> <input type="radio" name="five", value='10'> Hate
+      <li> <input type="radio" name="five", value='20'> Love
+      <li> <input type="radio" name="five", value='30'> Courage
+      <li> <input type="radio" name="five", value='40'> Anger
+      <li> <input type="radio" name="five", value='50'> Fear
+
+
+        </ol>
+       
+        <label> How aggressive are you ? </label> 
+        <ol type='A'>
+       <li> <input type="radio" name="six", value='10'> I'm peaceful and friendly
+       <li> <input type="radio" name="six", value='20'> Strong willed, but not aggressive 
+       <li> <input type="radio" name="six", value='30'> A little aggressive
+       <li> <input type="radio" name="six", value='40'> Very aggressive
+       <li> <input type="radio" name="six", value='50'> Extremely aggressive
+         </ol>
+        
+        <input type="button" value="Next" onclick="document.location.replace('form_3.html'); add()">
+
+    </form>
+    <!-- <link rel="script" href="/js/animals.js"> -->
+
+    <script>
+      function add(){
+      var sum2 = 0;
+      sum2 = sum2 + Number(document.frm2.four.value);
+      sum2 = sum2 + Number(document.frm2.five.value);
+      sum2 = sum2 + Number(document.frm2.six.value);
+      localStorage.setItem('sum2', sum2);
+
+}
+   </script>
+    
+</body>
+</html>

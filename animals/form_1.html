@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<body>
+    <form action="" name='frm1'>
+       <label> Choose one sport from the following :</label> 
+       <ol type='A'>
+      <li> <input type="radio" name="one", value='10'> Table tennis or tennis
+      <li> <input type="radio" name="one", value='20'> Lacrosse or cricket or baseball
+      <li> <input type="radio" name="one", value='30'> Football or basketball
+      <li> <input type="radio" name="one", value='40'> Hocky or golf
+      <li> <input type="radio" name="one", value='50'> Wrestling or boxing
+        </ol>
+
+       <label> How do you respond when someone insults you ? </label> 
+       <ol type='A'>
+      <li> <input type="radio" name="two", value='10'> I ignore them
+      <li> <input type="radio" name="two", value='20'> Doesn't affect me at all
+      <li> <input type="radio" name="two", value='30'> I blush or start crying
+      <li> <input type="radio" name="two", value='40'> Get angry, but do nothing
+      <li> <input type="radio" name="two", value='50'> I punch them
+        </ol>
+       
+        <label> How would you prefer to travel ? </label> 
+        <ol type='A'>
+       <li> <input type="radio" name="three", value='10'> By bus
+       <li> <input type="radio" name="three", value='20'> By boat or ship
+       <li> <input type="radio" name="three", value='30'> By train
+       <li> <input type="radio" name="three", value='40'> By aeroplane
+       <li> <input type="radio" name="three", value='50'> Private car or bike
+         </ol>
+        
+        <input type="button" value="Next" onclick="document.location.replace('form_2.html'); add()">
+
+ 
+    </form>
+    
+    <!-- <script src="animals.js"></script> -->
+    <script>
+       function add(){
+        var sum1 = 0;
+       sum1 = sum1 + Number(document.frm1.one.value);
+       sum1 = sum1 + Number(document.frm1.two.value);
+       sum1 = sum1 + Number(document.frm1.three.value);
+       localStorage.setItem('sum1',sum1);
+}
+    </script>
+
+</body>
+</html>
